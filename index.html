@@ -19,21 +19,31 @@
                 max-width: 100%; 
             }
 
-            img {
+            .hero {
                 padding: 0;
                 margin:  0;
+                flex: 1;
+            }
+            .holder {
+                display: flex;
+                max-height: 50vh;
+                overflow: hidden;
+                flex-direction: column;
+                justify-content: end;
+                padding: 0 2em;
             }
         </style>
     </head>
     <body>
         <h1 style="text-align:center;margin-top:2em;margin-bottom: 2em;">Creekvale Ventures</h1>
-        <div style="padding: 0 2em;"> 
+        <p>- Minnesota Real Estate Solutions -</p>
+        <div class="holder"> 
             <img
             data-sizes="auto"
             data-src="door-1000.jpg"
             data-srcset="door-600.jpg 600w,
             door-1000.jpg 1000w,
-            door-1600.jpg 1600w" class="lazyload" />
+            door-1600.jpg 1600w" class="hero  lazyload" />
         </div>
     </body>
 </html>
