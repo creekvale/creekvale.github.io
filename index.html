@@ -10,42 +10,68 @@
                 padding: 0;
             }
 
-            .header {
-                text-align: center;
-                margin: 3em 0;
-            }
-            
-            .header h1 {
-                font-family:Georgia, serif;
-                font-weight: 400;
-                margin-bottom: 0;
+            body {
+                background: #eee;
             }
 
-            .header p {
-                margin-top: 0;
-            }
 
             img, canvas, iframe, video, svg, select, textarea {
                 max-width: 100%; 
             }
 
-            .hero {
-                padding: 0;
-                margin:  0;
-                flex: 1;
+            .bkg--holder {
+                height: 100vh;
+                width:  100vw;
+                background-size: cover;
+                display: block;
+                position: relative;
+                z-index: 1;
             }
-            .holder {
-                display: flex;
-                max-height: 50vh;
-                overflow: hidden;
-                flex-direction: column;
-                justify-content: end;
-                padding: 0 2em;
+
+            .bkg--holder:before {
+                content:"";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                width:  100vw;
+                height: 100vh;
+                /* background-image: linear-gradient(180deg,transparent 5%,#333); */
+                background: rgba(0, 0, 0, .5);
+                opacity: 1;
+                z-index: 1
+            }
+
+            .text {
+                    left: 1em;
+                    top: 1em;
+                    position:absolute;
+                    z-index:10;
+                    color: #777;
+                    font-family:helvetica,arial;
+                    font-weight: 400;
+            }
+
+
+                h1 {
+                    font-size: 2rem;
+                    font-weight: 400;
+                    margin-bottom: 0;
+                }
+            
+
+            @media screen and (min-width: 480px){
+            h1 {
+                top:2em;
+                left:2em;
+                font-size: 4rem;
+            }
             }
         </style>
     </head>
     <body>
-        <header class="header">
+<!--         <header class="header">
             <h1>Creekvale Properties</h1>
             <p>- Real Estate Solutions -</p>
         </header>
@@ -56,6 +82,14 @@
             data-srcset="door-600.jpg 600w,
             door-1000.jpg 1000w,
             door-1600.jpg 1600w" class="hero  lazyload" />
-        </div>
+        </div> -->
+
+<!--      <div class="bkg--holder  lazyload" data-bgset="door-600.jpg 600w, door-1000.jpg 1000w, door-1600.jpg 1600w, door-2400.jpg 2400w" data-sizes="auto">
+    </div> -->
+    <div class="text">
+       <h1>Creekvale Ventures</h1>
+<!--        <h2>Real estate solutions</h2> -->
+       <p>New site coming soon.</p>
+    </div>
     </body>
 </html>
